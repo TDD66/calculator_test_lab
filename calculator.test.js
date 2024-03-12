@@ -101,6 +101,12 @@ describe('multiply', () => {
     expect(actual).toBe(expected);
   });
 
+  test('can multiply with zero', () => {
+    expected = 0;
+    actual = multiply(10, 0);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('divide', () => {
@@ -123,11 +129,24 @@ describe('divide', () => {
     expect(actual).toBe(expected);
   });
 
-  test('can multiply one negative number with a positive number', () => {
+  test('can divide one negative number with a positive number', () => {
     expected = -5;
     actual = divide(10, -2);
     expect(actual).toBe(expected);
   });
+
+  test('can divide zero by a number', () => {
+    expected = 0;
+    actual = divide(0, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide a number by zero', () => {
+    expected = Infinity;
+    actual = divide(10, 0);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('modulus', () => {
