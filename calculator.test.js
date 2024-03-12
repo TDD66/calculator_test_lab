@@ -43,7 +43,35 @@ describe('sum', () => {
 });
 
 describe('subtract', () => {
+  test('can subtract two small positive numbers', () => {
+    expected = 1;
+    actual = subtract(3, 2);
+    expect(actual).toBe(expected);
+  });
 
+  test('can subtract two large positive numbers', () => { 
+    expected = -90000000000;
+    actual = subtract(9999999999, 99999999999);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract two negative numbers', () => {
+    expected = -2;
+    actual = subtract(-6, -4);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract zero', () => {
+    expected = 5;
+    actual = subtract(5, 0);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract negative number from positive number', () => {
+    expected = 30;
+    actual = subtract(20, -10);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('multiply', () => {
