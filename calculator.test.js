@@ -151,7 +151,32 @@ describe('divide', () => {
 
 describe('modulus', () => {
 
+  test('can get the modulus from two small positive integers', () => {
+    expected = 1;
+    actual = modulus(3, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can get the modulus from two large positive integers', () => {
+    expected = 1;
+    actual = modulus(99999999999, 99999999998);
+    expect(actual).toBe(expected);
+  });
+
+  test('can get the modulus from two negative integers', () => {
+    expected = -1;
+    actual = modulus(-5, -2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can get the modulus of zero', () => {
+    expected = 0;
+    actual = modulus(0, 4);
+    expect(actual).toBe(expected);
+  });
 });
+
+
 
 describe('even', () => {
 
