@@ -105,6 +105,29 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
+  test('can divide with two small positive numbers', () => {
+    expected = 3;
+    actual = divide(6, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide with two larger positive numbers', () => {
+    expected = 1030210;
+    actual = divide(116424032100, 113010);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide with two negative numbers', () => {
+    expected = 5;
+    actual = divide(-10, -2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply one negative number with a positive number', () => {
+    expected = -5;
+    actual = divide(10, -2);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('modulus', () => {
