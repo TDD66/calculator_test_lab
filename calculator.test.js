@@ -180,8 +180,91 @@ describe('modulus', () => {
 
 describe('even', () => {
 
+  test('small even number', () => {
+    expected = true;
+    actual = even(8);
+    expect(actual).toBe(expected);
+  });
+
+  test('small odd number', () => {
+    expected = false;
+    actual = even(7);
+    expect(actual).toBe(expected);
+  });
+
+  test('large even number', () => {
+    expected = true;
+    actual = even(81232732);
+    expect(actual).toBe(expected);
+  });
+
+  test('large odd number', () => {
+    expected = false;
+    actual = even(8123819331);
+    expect(actual).toBe(expected);
+  });
+
+  test('negative even number', () => {
+    expected = true;
+    actual = even(-6);
+    expect(actual).toBe(expected);
+  });
+
+  test('negative odd number', () => {
+    expected = false;
+    actual = even(-7);
+    expect(actual).toBe(expected);
+  });
+
+  test('zero', () => {
+    expected = true;
+    actual = even(0);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('odd', () => {
 
+  test('small even number', () => {
+    expected = false;
+    actual = odd(8);
+    expect(actual).toBe(expected);
+  });
+
+  test('small odd number', () => {
+    expected = true;
+    actual = odd(7);
+    expect(actual).toBe(expected);
+  });
+
+  test('large even number', () => {
+    expected = false;
+    actual = odd(81232732);
+    expect(actual).toBe(expected);
+  });
+
+  test('large odd number', () => {
+    expected = true;
+    actual = odd(8123819331);
+    expect(actual).toBe(expected);
+  });
+
+  test('negative even number', () => {
+    expected = false;
+    actual = odd(-6);
+    expect(actual).toBe(expected);
+  });
+
+  test('negative odd number', () => {
+    expected = true;
+    actual = odd(-7);
+    expect(actual).toBe(expected);
+  });
+
+  test('zero', () => {
+    expected = false;
+    actual = odd(0);
+    expect(actual).toBe(expected);
+  });
 });

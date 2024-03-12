@@ -18,9 +18,13 @@ const modulus = function(a, b){
     return a % b;
 };
 
-const even = null;
+const even = function(a){
+    return modulus(a, 2) === 0;
+};
 
-const odd = null;
+const odd = function(a){
+    return !even(a);
+};
 
 module.exports = { 
     sum, 
